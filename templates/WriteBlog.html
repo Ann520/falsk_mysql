@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<form action="/WriteBlog" method="post">
+    <p>标题：<input type="text" name="title"></p>
+    <p>内容：<textarea type="text" name="content" rows="13" cols="20"></textarea></p>
+    <p>
+        <button type="submit">发布</button>
+    </p>
+</form>
+{% if meaasge!=None %}
+{{message}}
+{% endif%}
+{% endblock %}

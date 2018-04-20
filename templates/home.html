@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div style="width=500px;">
+{% for i in lst_blog %}
+    <div style="border:1px solid #000" onclick="window.location.href='{{url_for('getBlogDetails',blogid=i.id)}}'">
+        <p style="color:red;font-size:20px">{{i.title}}</p>
+        <p style="padding-left:30%">作者：{{i.name}} &nbsp;&nbsp;&nbsp;&nbsp;日期：{{i.createdate}}</p>
+
+    </div>
+{% endfor %}
+    </div>
+{% endblock %}
+

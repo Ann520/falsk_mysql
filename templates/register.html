@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="{{url_for('register')}}" method="post">
+<p>学号：<input type="text" name="id"></p>
+<p>姓名：<input type="text" name="name"></p>
+<p><button type="submit">注册</button></p>
+</form>
+{% if meaasge!=None %}
+{{message}}
+{% endif%}
+</body>
+</html>

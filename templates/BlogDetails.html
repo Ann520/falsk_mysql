@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div style="border:1px solid #000" align="center">
+        <p style="color:red;font-size:20px">{{blogdetails.title}}</p>
+        <p style="color:red;font-size:20px">{{blogdetails.content}}</p>
+        <p style="padding-left:30%">作者：{{blogdetails.name}} &nbsp;&nbsp;&nbsp;&nbsp;日期：{{blogdetails.createdate}}</p>
+    </div>
+{% endblock %}
+

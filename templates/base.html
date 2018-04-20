@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    {% if id %}
+    欢迎用户：{{ name }}
+    <input type="button" value="退出登录" onclick="window.location.href='{{url_for('loginout')}}'"/>
+    <input type="button" value="发布博客" onclick="window.location.href='{{url_for('WriteBlog_form')}}'"/>
+    {% else %}
+    <input type="button" value="登录" onclick="window.location.href='{{url_for('signin_form')}}'"/>
+    <input type="button" value="注册" onclick="window.location.href='{{url_for('register_form')}}'"/>
+    {% endif %}
+</div>
+<div>
+{% block main %}
+
+{% endblock %}
+</div>
+</body>
+</html>
